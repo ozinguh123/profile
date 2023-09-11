@@ -1,0 +1,74 @@
+:root {
+    --body-bg: purple;
+    --hamberger-bg: purple;
+}
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: var(--body-bg);
+}
+.hamberger-title{
+    color: white;
+    font-size: 15px;
+    padding-bottom: 7px;
+}
+
+.hamberger{
+    margin-left: 95%;
+
+}
+
+
+.hamberger,
+.hamberger::before,
+.hamberger::after{
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    transition: 0.1s;
+    background: black;
+}
+.hamberger::before,
+.hamberger::after {
+    content: "";
+    margin-left: 0px;
+
+}
+.hamberger{
+    top: 3%;
+
+}
+.hamberger::before{
+    TOP: -15PX;
+}
+.hamberger::after{
+    top: 15px;
+}
+
+.toggle:checked ~ .hamberger::after{
+    top: 0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamberger::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.toggle:checked ~ .hamberger {
+background: white;
+}
+.toggle{
+    opacity: 0;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 250px;
+    height: 150px;
+    background-image: url(수행평가.jpg);
+}
